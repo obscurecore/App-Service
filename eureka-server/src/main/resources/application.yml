@@ -1,0 +1,34 @@
+#spring:
+#  application:
+#    name: eureka-server
+#
+#server:
+#  port: ${PORT:8761}
+#
+#eureka:
+#  client:
+#    register-with-eureka: false  # eureka by default will register itself as a client. So, we need to set it to false.
+#    fetch-registry: false        # Indicates whether this client should fetch eureka registry information from eureka server.
+#    instance-info-replication-interval-seconds: 10     # Indicates how often(in seconds) to replicate instance changes to be replicated to the eureka server.
+#  server:
+#    eviction-interval-timer-in-ms: 50000
+#    wait-time-in-ms-when-sync-empty: 5
+
+---
+
+# FOR EUREKA REPLICAS EXAMPLE
+
+
+spring:
+  application:
+    name: eureka-server
+server:
+  port: ${PORT:8761}
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    instance-info-replication-interval-seconds: 10
+  server:
+    eviction-interval-timer-in-ms: 50000
+    wait-time-in-ms-when-sync-empty: 5

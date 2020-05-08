@@ -1,4 +1,4 @@
-package com.example.reactive.server;
+package ru.ruslan.reactive.server;
 
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -14,6 +14,8 @@ import reactor.core.Disposable;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 import reactor.util.Loggers;
+import ru.ruslan.server.reactive.server.Connection;
+import ru.ruslan.server.reactive.server.ReactiveServer;
 
 import static pl.touk.throwing.ThrowingRunnable.unchecked;
 

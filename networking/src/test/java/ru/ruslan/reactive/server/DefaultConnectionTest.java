@@ -1,4 +1,4 @@
-package com.example.reactive.server;
+package ru.ruslan.reactive.server;
 
 import java.io.IOException;
 import java.net.Socket;

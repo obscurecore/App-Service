@@ -1,6 +1,26 @@
-version: '2'
+version: '3.1'
+
 services:
-  mongo:
-    image: mongo:latest
+
+  adminer:
+    image: adminer
+    restart: always
     ports:
-      - "27020:27017"
+      - 8010:8080
+
+  dbPostgres:
+    image: postgres:10
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: changeme
+      POSTGRES_DB: AppUser
+
+  dbMongo:
+    image: mongo:3.6.2
+    restart: always
+    ports:
+      - 27017:27017
+
